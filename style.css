@@ -149,7 +149,7 @@ a {
   margin: 0 auto;  /* Key for centering the block */
   display: block; /* Important: Make it a block element */
   width: auto; /* Or a percentage width if you want it to be less than 100% */
-  max-width: 80%; /*Keep this if you want to limit the size*/
+  max-width: 90%; /*Keep this if you want to limit the size*/
   
 }
 .content h3:hover
@@ -238,7 +238,7 @@ a {
     background-color: #000; /* Or background-color: black;  Make absolutely sure this is set */
 }
 
-  .sectionleft h2, .sectionright h2 {
+  .sectionleft h2, .sectionright h2, .section h2 {
     font-size: 240%;
     z-index: 6;
     font-weight: 1000;
@@ -250,9 +250,9 @@ a {
     padding-top: 5%;
   }
 
-  .sectionleft h1, .sectionright h1 {
+  .sectionleft h1, .sectionright h1, .section h1 {
     font-size: 260%;
-    z-index: 31;
+    z-index: 310;
     font-weight: 1000;
     color: #6c2929;
     /* Center the h3 element itself */
@@ -262,14 +262,14 @@ a {
     padding-top: 5%;
   }
 
-  .sectionleft h1:hover, .sectionright h1:hover
+  .sectionleft h1:hover, .sectionright h1:hover, .section h1:hover
 {
     transform: scaleX(1.1);
 }
 
-  .sectionleft h3, .sectionright h3 {
+  .sectionleft h3, .sectionright h3, .section h3 {
     font-size: 150%;
-    z-index: 6;
+    z-index: 100;
     font-weight: 1000;
     color: #ffffff;
     /* Center the h3 element itself */
@@ -281,7 +281,7 @@ a {
     left: 0;
   }
 
-  .sectionleft p, .sectionright p {
+  .sectionleft p, .sectionright p, .section p {
     z-index: 6;
     font-weight: 10;
     color: #ffffff;
@@ -303,9 +303,42 @@ a {
     width: auto;
 }
 
+.paragraphs .section {
+  align-items: center;
+  max-width: 80%;
+  min-height: 45%;
+  background-color: #000000;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  width: auto;
+}
+
+
   .sectionright h2, .sectionright h3, .sectionright p, .sectionright h1{
     text-align: right; /* Explicitly align text within headings and paragraphs */
 }
+
+.section h2, .section h3, .section p, .section h1{
+  text-align: center; /* Explicitly align text within headings and paragraphs */
+  margin: 0;
+  z-index: 10;
+  
+}
+
+.paragraphs .section {
+  padding-top: 10%;
+  max-width: 80%;
+  min-height: 45%;
+  background-color: #000000;
+  margin: 0 auto; /* Center the container */
+  display: flex; /* Use flexbox for vertical centering */
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text within items */
+}
+
+
 .paragraphs .sectionright {
   max-width: 80%;
   min-height: 45%;
@@ -328,7 +361,7 @@ a {
     width: 50%;
     height: 35%;
     object-fit: cover;
-    opacity: 0.1;
+    opacity: 0.2;
     transition: 0.5s;
     z-index: 0;
     border-radius: 5%;
@@ -341,7 +374,6 @@ a {
     width: 50%;
     height: 35%;
     object-fit: cover;
-    opacity: 0.1;
     transition: 0.5s;
     z-index: 0;
     border-radius: 5%;
@@ -359,6 +391,19 @@ a {
     opacity: 1; /* Ensure it's visible initially */
     transition: opacity 0.5s ease; /* Smooth transition (optional) */
   }
+
+  .section video {
+    position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  opacity: 0.2;
+  transition: 0.5s;
+  z-index: 0;
+  }
+
 
   footer {
     position: absolute; /* Changed to fixed */
@@ -388,13 +433,29 @@ a {
   }
   
   footer .icon {
-    max-width: 6%;
+    max-width: 4%;
     height: auto; /* Maintain aspect ratio */
     position: relative;
     z-index: 40;
     /* Removed fixed padding */
   }
   
+  footer h1 {
+    font-size: 0.8vw;
+    font-weight: 10;
+    color: #fff;
+    line-height: 1.5vw;
+    font-family: 'Poppins', sans-serif;
+    opacity: 1;
+    text-align: center;
+    padding: 0 3%;
+    flex: 1;
+    z-index: 40;
+    /* Add these styles to control link appearance */
+    color: #fff; /* Set link color to match text */
+    
+  }
+
   footer .direct {
     font-size: 1vw;
     font-weight: 10;
